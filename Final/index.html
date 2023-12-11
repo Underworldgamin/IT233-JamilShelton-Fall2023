@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="path/to/slick.css">
+    <link rel="stylesheet" href="path/to/slick-theme.css">
+    <script src="jquery.min.js"></script>
+    <script src="path/to/slick.min.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap">
+    <style>
+        /* Add this CSS style to center the profile picture */
+        .profile-picture {
+            text-align: center;
+        }
+
+        .profile-picture img {
+            display: inline-block;
+            border-radius: 50%; /* Optional: Add border-radius for a circular profile picture */
+        }
+    </style>
+    <title>Jamil Shelton - Portfolio</title>
+</head>
+<body>
+
+    <!-- Navigation Section -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content Section -->
+    <section id="home">
+        <div class="intro">
+            <h1>Jamil Shelton</h1>
+            <p>Web Developer | Designer</p>
+            <p>Welcome to my portfolio website! I specialize in creating beautiful and functional web experiences.</p>
+        </div>
+        <div class="profile-picture">
+            <img src="profile.jpg" alt="Jamil Shelton - Profile Picture">
+            <h1>Welcome to my digital playground, where I turn caffeine into code and dreams into interactive experiences! As a Web Developer, I embark on a never-ending quest to make the internet a cooler place one line of code at a time. Armed with my trusty keyboard and a cup of coffee that's always one refill away from greatness, I specialize in the magical arts of HTML, CSS, and JavaScript, sprinkled with a dash of React.js and Node.js wizardry.
+
+                When not conjuring up digital wonders, you'll find me embracing my alter ego as a family aficionado. Beyond the screen, I'm all about the fine art of juggling - whether it's juggling code, deadlines, or quality time with my loved ones. Life's too short for boring websites, so let's embark on this adventure together! </h1>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>React.js</li>
+            <li>Node.js</li>
+            <li>UI/UX Design</li>
+            <!-- Add more skills as needed -->
+        </ul>
+    </section>
+
+        <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Have a project in mind or just want to say hi? Feel free to reach out to me using the form below:</p>
+
+        <form id="contactForm" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div id="feedback"></div>
+    </section>
+
+    <!-- Add Slick Carousel Initialization -->
+    <script>
+        $(document).ready(function(){
+            $('.project-carousel').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                adaptiveHeight: true
+            });
+        });
+    </script>
+
+</body>
+</html>
